@@ -6,6 +6,10 @@
 import Rails from "@rails/ujs"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
+import "bootstrap/dist/js/bootstrap"
+import "@fortawesome/fontawesome-free/js/all"
+import "jquery.easing/jquery.easing"
+import "../../../lib/assets/javascripts/sb-admin-2"
 
 Rails.start()
 ActiveStorage.start()
