@@ -9,6 +9,8 @@ import "channels"
 import "bootstrap/dist/js/bootstrap"
 import "@fortawesome/fontawesome-free/js/all"
 import "jquery.easing/jquery.easing"
+import "datatables.net/js/jquery.dataTables"
+import "datatables.net-bs4/js/dataTables.bootstrap4"
 import "../../../lib/assets/javascripts/sb-admin-2"
 
 Rails.start()
