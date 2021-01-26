@@ -54,10 +54,22 @@
   </body>
   <script>
     $(document).ready(function() {
-      $('#myTable').DataTable();
+      $('#myTable').DataTable({
+        language: {
+            url: 'https://cdn.datatables.net/plug-ins/1.10.22/i18n/Portuguese.json'
+        }
+      });
     });
 
-  </script>
+    <% if notice %>
+      $.bootstrapGrowl('<%= notice %>', {
+      type: 'success', // (null, 'info', 'danger', 'success')
+      align: 'right', // ('left', 'right', or 'center')
+      allow_dismiss: true, // If true then will display a cross to close the popup.
+      stackup_spacing: 10 // spacing between consecutively stacked growls.
+      });
+    <% end %>
 
+  </script>
 </html>
 

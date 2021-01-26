@@ -1,7 +1,7 @@
 <div class="container-fluid">
-  <a href="/admins/admins/new">
+  <a href="/admins/clients/new">
     <button type="button" class="btn btn-success" style="margin-left:15px ;"><i class="fas fa-user-plus"></i>
-    <b>Novo Usuário</b></button>
+    <b>Novo Cliente</b></button>
   </a>
 <div class="card-body">
   <div class="table-responsive">
@@ -9,21 +9,23 @@
       <thead>
         <tr>
           <th>ID</th>
-          <th>E-mail</th>
-          <th>Criado em</th>
-          <th>Atualizado em</th>
+          <th>Nome Completo</th>
+          <th>Celular</th>
+          <th>RG</th>
+          <th>Criança</th>
           <th>Ações</th>
         </tr>
       </thead>
       <tbody>
-        <% @admins.each do |admin| %>
+        <% @clients.each do |var| %>
           <tr>
-            <td> <%= admin.id %> </td>
-            <td> <%= admin.email %> </td>
-            <td> <%= admin.created_at %> </td>
-            <td> <%= admin.updated_at %> </td>
+            <td> <%= var.id %> </td>
+            <td> <%= var.name_full %> </td>
+            <td> <%= var.rg %> </td>
+            <td> <%= var.cellphone %> </td>
+            <td> <%= humanize_boolean(var.child) %> </td>
             <td>
-              <%= link_to edit_admins_admin_path(admin),
+              <%= link_to edit_admins_client_path(var),
                 class: "btn btn-primary btn-xs btn-green-alt" do %>
                 <i class="fas fa-edit"></i>
                 Editar
