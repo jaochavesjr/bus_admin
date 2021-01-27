@@ -1,0 +1,67 @@
+<h6 class="m-3 font-weight-bold text-primary"> <%= "#{action_message} Car"%></h6>
+<% if @car.errors.any? %>
+  <div class="alert alert-danger alert-dismissable">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+    <ul>
+      <% @car.errors.full_messages.each do |message| %>
+        <li> <%= message %> </li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+<div class="card" style="height: 30rem; padding-top: 4%;">
+  <div class="col-12">
+    <%= form_with(model: [ :admins, @car], local: true) do |form| %>
+      <div class="container">
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <div class="col-sm-8">
+              <label for="">Modelo</label>
+              <%= form.text_field :model, class: "form-control" %>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-7">
+            <div class="col-sm-4">
+              <label for="">Placa</label>
+              <%= form.text_field :plate, class: "form-control" %>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-7">
+            <div class="col-sm-2">
+              <label for="">Quantidade de Lugares</label>
+              <%= form.text_field :number_seats, class: "form-control" %>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-7">
+            <div class="col-sm-2">
+              <label for="">Ativo ?</label>
+              <div>
+                <%= form.check_box :active %>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <div class="col-sm-8">
+              <div class="float-right">
+                <button type="submit" class="btn btn-success"><i class="fas fa-save mr-1"></i>Salvar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <% end %>
+  </div>
+</div>

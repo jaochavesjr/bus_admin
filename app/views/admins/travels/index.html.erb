@@ -1,0 +1,41 @@
+<div class="container-fluid">
+  <a href="/admins/travels/new">
+    <button type="button" class="btn btn-success" style="margin-left:15px ;"><i class="fas fa-user-plus"></i>
+    <b>Nova Viagem</b></button>
+  </a>
+<div class="card-body">
+  <div class="table-responsive">
+    <table id="myTable" class="table table-bordered table-striped table-hover" width="100%" cellspacing="0">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Origem</th>
+          <th>Destino</th>
+          <th>Carro</th>
+          <th>Data e Hora</th>
+          <th>Realizada ?</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @travels.each do |var| %>
+          <tr>
+            <td> <%= var.id %> </td>
+            <td> <%= var.origin.name %> </td>
+            <td> <%= var.destination.name %> </td>
+            <td> <%= var.car.plate %> </td>
+            <td> <%= var.date %> </td>
+            <td> <%= humanize_boolean(var.done) %> </td>
+            <td>
+              <%= link_to edit_admins_travel_path(var),
+                class: "btn btn-primary btn-xs btn-green-alt" do %>
+                <i class="fas fa-edit"></i>
+                Editar
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

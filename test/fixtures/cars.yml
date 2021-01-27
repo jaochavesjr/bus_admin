@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  plate: MyString
+  model: MyString
+  number_seats: 1
+  active: false
+
+two:
+  plate: MyString
+  model: MyString
+  number_seats: 1
+  active: false

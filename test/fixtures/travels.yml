@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  origin: one
+  destination: one
+  car: one
+  driver: one
+  date: 2021-01-27 01:01:23
+  done: false
+
+two:
+  origin: two
+  destination: two
+  car: two
+  driver: two
+  date: 2021-01-27 01:01:23
+  done: false

@@ -4,6 +4,9 @@ Rails.application.routes.draw do
     get 'dashboard/index'
     resources :admins
     resources :clients
+    resources :cars
+    resources :drivers
+    resources :travels
   end
   devise_for :admins
 

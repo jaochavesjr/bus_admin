@@ -4,6 +4,21 @@
       admin:
         one: Administrador
         other: Administradores
+      client:
+        one: Cliente
+        other: Clientes
+      car:
+        one: Carro
+        other: Carros
+      driver:
+        one: Motorista
+        other: Motoristas
+      address:
+        one: Endereço
+        other: Endereços
+      travel:
+        one: Viagem
+        other: Viagens
     attributes:
       admin:
         email: E-mail
@@ -16,4 +31,27 @@
         cellphone: Celular
         rg: RG
         child: Criança
+      car:
+        plate: Placa
+        model: Modelo
+        number_seats: Número de Assentos
+        active: Ativo
+      driver:
+        name_full: Nome Completo
+        nickname: Apelido
+        cpf: CPF
+        cellphone: Celular
+        active: Ativo
+      address:
+        street: Endereço
+        number: Número
+        complement: Complemento
+        neighborhood: Bairro
+        city: Cidade
+      travel:
+        origin: Origin
+        destination: Destino
+        car: Carro
+        date: Data e Hora da Viagem
+        done: Realizada
 
