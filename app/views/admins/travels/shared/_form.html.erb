@@ -18,7 +18,7 @@
           <div class="form-group col-md-6">
             <div class="col-sm-6">
               <label for="">Estado de Origem</label>
-              <%= form.collection_select :state_id, State.all, :id, :name, :include_blank => true, class: "form-control" %>
+              <%= form.collection_select :state_origin_id, State.all, :id, :name, :include_blank => true, class: "form-control" %>
             </div>
           </div>
 
@@ -35,7 +35,7 @@
           <div class="form-group col-md-6">
             <div class="col-sm-6">
               <label for="">Estado de Destino</label>
-              <%= form.collection_select :state_id, State.all, :id, :name, :include_blank => true, class: "form-control" %>
+              <%= form.collection_select :state_destination_id, State.all, :id, :name, :include_blank => true, class: "form-control" %>
             </div>
           </div>
 
@@ -52,6 +52,15 @@
             <div class="col-sm-6">
              <label for="">Carro da Viagem</label>
               <%= form.collection_select :car_id, Car.all, :id, :model, :include_blank => true, class: "form-control" %>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <div class="col-sm-6">
+             <label for="">Motoristas</label>
+              <%= form.select(:driver_ids, Driver.all.collect {|t| [t.nickname, t.id]}, {}, {multiple: true}) %>
             </div>
           </div>
         </div>

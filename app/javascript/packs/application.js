@@ -13,6 +13,9 @@ import "datatables.net/js/jquery.dataTables"
 import "datatables.net-bs4/js/dataTables.bootstrap4"
 import "../../../lib/assets/javascripts/sb-admin-2"
 import "bootstrap-growl-ifightcrime/jquery.bootstrap-growl"
+import "../packs/travels"
+
+
 
 Rails.start()
 ActiveStorage.start()
